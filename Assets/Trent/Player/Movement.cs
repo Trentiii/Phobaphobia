@@ -36,11 +36,11 @@ public class Movement : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        if (facingRight == false && moveInput > 0)
+        //if (facingRight == false && moveInput > 0)
         {
             Flip();
         }
-        else if (facingRight == true && moveInput < 0)
+       // else if (facingRight == true && moveInput < 0)
         {
             Flip();
         }
