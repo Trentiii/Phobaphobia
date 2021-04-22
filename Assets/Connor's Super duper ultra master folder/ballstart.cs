@@ -10,7 +10,7 @@ public class ballstart : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(9.8f * 25f, 9.8f * 25f));
+        rb.AddForce(new Vector2(9f * 25f, 0f * 25f));
     }
 
     // Update is called once per frame
@@ -18,4 +18,7 @@ public class ballstart : MonoBehaviour
     {
         
     }
+
+
+
 }

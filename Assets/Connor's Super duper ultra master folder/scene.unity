@@ -542,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 271690094}
+  boolet: {fileID: 6753968888483741196, guid: 079153708e6681645990942b633f7775, type: 3}
 --- !u!1 &931556918
 GameObject:
   m_ObjectHideFlags: 0
