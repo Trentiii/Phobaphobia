@@ -5,6 +5,7 @@ using UnityEngine;
 public class testingmovement : MonoBehaviour
 {
     public float speed;
+    public float shieldSpeed;
     public float jumpForce;
     public float moveInput;
 
@@ -20,11 +21,15 @@ public class testingmovement : MonoBehaviour
 
     private int extraJumps;
     public int extraJumpsValue;
+    
+    public Shield script;
 
+    
     private void Start()
     {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     private void FixedUpdate()
@@ -35,6 +40,7 @@ public class testingmovement : MonoBehaviour
 
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        
 
         //if (facingRight == false && moveInput > 0)
         {
@@ -62,6 +68,11 @@ public class testingmovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+
+        if (script.shieldout == true)
+        {
+            speed = shieldSpeed;
+        }
     }
 
     void Flip()
@@ -71,4 +82,6 @@ public class testingmovement : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+
+
 }
