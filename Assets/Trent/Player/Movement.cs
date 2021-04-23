@@ -19,6 +19,8 @@ public class Movement : MonoBehaviour
 
     public float launchForce;
 
+    public Vector3 respawnPoint;
+
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -27,8 +29,10 @@ public class Movement : MonoBehaviour
     {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        respawnPoint = transform.position;
     }
 
+    //Movement
     private void FixedUpdate()
     {
 
@@ -48,6 +52,7 @@ public class Movement : MonoBehaviour
         }
     }
 
+    //Jump
     private void Update()
     {
         if (isGrounded == true)
@@ -79,6 +84,18 @@ public class Movement : MonoBehaviour
         if(other.gameObject.CompareTag("Trampoline"))
         {
             rb.velocity = Vector2.up * launchForce;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Death")
+        {
+            transform.position = respawnPoint;
+        }
+        if (other.tag == "Checkpoint")
+        {
+            respawnPoint = other.transform.position;
         }
     }
 }
