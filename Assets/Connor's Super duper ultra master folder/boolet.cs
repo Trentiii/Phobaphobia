@@ -34,4 +34,9 @@ public class boolet : MonoBehaviour
 
         rb.velocity = direction * Mathf.Max(speed, 0f);
     }
+
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        Destroy(gameObject);
+    }
 }

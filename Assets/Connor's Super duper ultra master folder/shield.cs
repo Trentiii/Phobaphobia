@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class shield : MonoBehaviour
 {
+    private Rigidbody2D rb;
     public Transform shieldpoint;
     public GameObject shieldprototype;
     // Start is called before the first frame update
@@ -23,6 +24,8 @@ public class shield : MonoBehaviour
 
     void startShield()
     {
-        Instantiate(shieldprototype, shieldpoint.position, shieldpoint.rotation);
+        //Instantiate(shieldprototype, shieldpoint.position, shieldpoint.rotation);
+        GameObject go = Instantiate(shieldprototype, shieldpoint.position, shieldpoint.rotation);
+        go.transform.parent = GameObject.Find("shieldpoint").transform;
     }
 }
