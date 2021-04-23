@@ -4,33 +4,27 @@ using UnityEngine;
 
 public class boolet : MonoBehaviour
 {
-    public float speed = 25f;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
+
     Vector3 lastVelocity;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    // Start is called before the first frame update  
     void Start()
     {
-        //rb.velocity = transform.right * speed;
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(9f * speed, 0f * speed));
-
+        rb.AddForce(new Vector2(9f * 25f, 0f * 25f));
+        lastVelocity = rb.velocity;
     }
 
     // Update is called once per frame
     void Update()
     {
         lastVelocity = rb.velocity;
-    }
-
-   /* private void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        Debug.Log(hitInfo.name);
-        Destroy(gameObject);
-    }*/
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D coll)

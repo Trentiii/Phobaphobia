@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class shootyShooty : MonoBehaviour
 {
-
     public Transform firePoint;
     public GameObject boolet;
     // Start is called before the first frame update
