@@ -8,6 +8,7 @@ public class Shield : MonoBehaviour
     public Transform shieldpoint;
     public GameObject shieldprototype;
     public bool shieldout = false;
+    private bool facingRight = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +30,13 @@ public class Shield : MonoBehaviour
         GameObject go = Instantiate(shieldprototype, shieldpoint.position, shieldpoint.rotation);
         go.transform.parent = GameObject.Find("shieldpoint").transform;
         shieldout = true;
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 }

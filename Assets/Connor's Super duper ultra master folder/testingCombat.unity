@@ -696,6 +696,7 @@ MonoBehaviour:
   shieldprototype: {fileID: 3238339554121492040, guid: 486c89d98db3b604cbb534ba42f65204,
     type: 3}
   shieldout: 0
+  scriptT: {fileID: 1640167672}
 --- !u!1 &1147659666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1028,7 @@ MonoBehaviour:
   shieldSpeed: 2.5
   jumpForce: 5
   moveInput: 5
+  facingRight: 1
   groundCheck: {fileID: 140017029}
   checkRadius: 15
   whatIsGround:
