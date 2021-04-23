@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
+    public float launchForce;
+
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -70,5 +72,13 @@ public class Movement : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Trampoline"))
+        {
+            rb.velocity = Vector2.up * launchForce;
+        }
     }
 }
