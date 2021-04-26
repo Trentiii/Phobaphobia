@@ -5,6 +5,7 @@ using UnityEngine;
 public class testingmovement : MonoBehaviour
 {
     public float speed;
+    public float startingSpeed;
     public float shieldSpeed;
     public float jumpForce;
     public float moveInput;
@@ -72,6 +73,10 @@ public class testingmovement : MonoBehaviour
         if (script.shieldout == true)
         {
             speed = shieldSpeed;
+        }
+        if (script.shieldout == false)
+        {
+            speed = startingSpeed;
         }
     }
 

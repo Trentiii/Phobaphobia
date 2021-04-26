@@ -9,6 +9,9 @@ public class Shield : MonoBehaviour
     public GameObject shieldprototype;
     public bool shieldout = false;
     private bool facingRight = false;
+    public float cooldownTime = 2;
+    private float nextshieldTime = 0;
+    private float killShield = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,24 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.time > nextshieldTime)
         {
-            startShield();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                startShield();
+                nextshieldTime = Time.time + cooldownTime;
+            }
+
         }
+        if (Input.GetButtonUp("Fire1"))
+        {
+            endShield();
+            nextshieldTime = Time.time + cooldownTime;
+        }
+
+
     }
+
 
     void startShield()
     {
@@ -30,6 +46,11 @@ public class Shield : MonoBehaviour
         GameObject go = Instantiate(shieldprototype, shieldpoint.position, shieldpoint.rotation);
         go.transform.parent = GameObject.Find("shieldpoint").transform;
         shieldout = true;
+    }
+    void endShield()
+    {
+            shieldout = false;
+            Destroy(shieldprototype);
     }
 
     void Flip()
