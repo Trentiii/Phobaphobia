@@ -2539,6 +2539,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trampoline
       objectReference: {fileID: 0}
+    - target: {fileID: 5016022384919549166, guid: 5623be400ef920444be25c97de1f82ee,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.007362187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016022384919549166, guid: 5623be400ef920444be25c97de1f82ee,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.9852756
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5623be400ef920444be25c97de1f82ee, type: 3}
 --- !u!1 &1707927204
