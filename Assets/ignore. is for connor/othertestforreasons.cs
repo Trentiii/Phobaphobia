@@ -14,12 +14,13 @@ public class othertestforreasons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > script.nextshieldTime)
+        if (Time.time > script.nextshieldTime & script.shieldout == true)
         {
             if (Input.GetButtonUp("Fire1"))
             {
                 Debug.Log("Shield is in!");
                 script.nextshieldTime = Time.time + script.cooldownTime;
+                script.shieldout = false;
             }
         }
     }
