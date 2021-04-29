@@ -12,7 +12,7 @@ public class testingmovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private bool facingRight = true;
+    public bool Turned = true;
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -43,14 +43,6 @@ public class testingmovement : MonoBehaviour
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         
 
-        //if (facingRight == false && moveInput > 0)
-        {
-            Flip();
-        }
-        // else if (facingRight == true && moveInput < 0)
-        {
-            Flip();
-        }
     }
 
     private void Update()
@@ -78,14 +70,23 @@ public class testingmovement : MonoBehaviour
         {
             speed = startingSpeed;
         }
+        if (Input.GetAxis("Horizontal") < 0 && !Turned)
+        {
+            Flip();
+        }
+
+        if (Input.GetAxis("Horizontal") > 0 && Turned)
+        {
+            Flip();
+        }
     }
 
-    void Flip()
+    private void Flip()
     {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        Turned = !Turned;
+
+        transform.Rotate(0f, 180f, 0f);
+
     }
 
 

@@ -8,10 +8,9 @@ public class Shield : MonoBehaviour
     public Transform shieldpoint;
     public GameObject shieldprototype;
     public bool shieldout = false;
-    private bool facingRight = false;
-    public float cooldownTime = 2;
-    private float nextshieldTime = 0;
-    private float killShield = 1;
+    public float cooldownTime = 2f;
+    private float nextshieldTime = 0f;
+    private float killShield = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +29,6 @@ public class Shield : MonoBehaviour
             }
 
         }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            endShield();
-            nextshieldTime = Time.time + cooldownTime;
-        }
 
 
     }
@@ -47,17 +41,7 @@ public class Shield : MonoBehaviour
         go.transform.parent = GameObject.Find("shieldpoint").transform;
         shieldout = true;
     }
-    void endShield()
-    {
-            shieldout = false;
-            Destroy(shieldprototype);
-    }
 
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
-    }
+
+
 }

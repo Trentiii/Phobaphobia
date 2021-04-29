@@ -6,16 +6,22 @@ public class shootyShooty : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject boolet;
+    private float fireRate = 0f;
+    private float cooldownTime = 2f;
     // Start is called before the first frame update
     void Start()
     {
-        shoot();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.time > fireRate)
+        {
+            shoot();
+            fireRate = Time.time + cooldownTime;
+        }
     }
 
     void shoot()

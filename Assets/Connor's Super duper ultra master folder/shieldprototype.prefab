@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8408276536670397879}
   - component: {fileID: 2775278429092911096}
   - component: {fileID: 230154519386907036}
+  - component: {fileID: 114365540481916646}
   m_Layer: 0
   m_Name: shieldprototype
   m_TagString: Untagged
@@ -106,3 +107,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114365540481916646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238339554121492040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaec175cdffd9174ab7b2e1b8db36a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldout: 0
+  cooldownTime: 2
