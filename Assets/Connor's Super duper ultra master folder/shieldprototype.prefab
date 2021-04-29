@@ -119,5 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaec175cdffd9174ab7b2e1b8db36a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldout: 0
-  cooldownTime: 2
+  script: {fileID: 0}

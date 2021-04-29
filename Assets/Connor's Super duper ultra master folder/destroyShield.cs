@@ -1,35 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class destroyShield : MonoBehaviour
 {
-    public bool shieldout = false;
-    public float cooldownTime = 2f;
-    private float nextshieldTime = 0f;
+    public GameObject shieldpoint;
+    public Shield Sscript;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        GameObject shieldpoint = GameObject.Find("shieldpoint");
+        Sscript = shieldpoint.GetComponent<Shield>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextshieldTime)
+        if (Time.time > Sscript.nextshieldTime & Sscript.shieldout == true)
         {
             if (Input.GetButtonUp("Fire1"))
             {
-                endShield();
-                nextshieldTime = Time.time + cooldownTime;
+                Destroy(gameObject);
+                Sscript.nextshieldTime = Time.time + Sscript.cooldownTime;
+                Sscript.shieldout = false;
             }
         }
-    }
-
-    void endShield()
-    {
-        shieldout = false;
-        Destroy(gameObject);
     }
 
 }

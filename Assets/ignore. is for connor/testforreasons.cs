@@ -7,7 +7,7 @@ public class testforreasons : MonoBehaviour
 
     public float cooldownTime = 2;
     public float nextshieldTime = 0;
-    public bool shieldout = false;
+    public bool thing = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class testforreasons : MonoBehaviour
             {
                 Debug.Log("Shield is out!");
                 //nextshieldTime = Time.time + cooldownTime;
-                shieldout = true;
+                thing = true;
             }
 
         }

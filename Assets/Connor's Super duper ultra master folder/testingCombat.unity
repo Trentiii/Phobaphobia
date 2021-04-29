@@ -697,6 +697,7 @@ MonoBehaviour:
     type: 3}
   shieldout: 0
   cooldownTime: 2
+  nextshieldTime: 0
 --- !u!1 &1147659666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,13 +1030,14 @@ MonoBehaviour:
   shieldSpeed: 2.5
   jumpForce: 5
   moveInput: 5
+  Turned: 1
   groundCheck: {fileID: 140017029}
   checkRadius: 15
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
   extraJumpsValue: 2
-  script: {fileID: 1004671508}
+  script: {fileID: 0}
 --- !u!58 &1640167673
 CircleCollider2D:
   m_ObjectHideFlags: 0

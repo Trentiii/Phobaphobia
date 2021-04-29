@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
@@ -9,8 +7,7 @@ public class Shield : MonoBehaviour
     public GameObject shieldprototype;
     public bool shieldout = false;
     public float cooldownTime = 2f;
-    private float nextshieldTime = 0f;
-    private float killShield = 1f;
+    public float nextshieldTime = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +22,6 @@ public class Shield : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 startShield();
-                nextshieldTime = Time.time + cooldownTime;
             }
 
         }
