@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114686610981048698}
   m_Layer: 0
   m_Name: boolet
-  m_TagString: Untagged
+  m_TagString: testingboolet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

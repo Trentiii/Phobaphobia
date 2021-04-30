@@ -33,10 +33,20 @@ public class boolet : MonoBehaviour
         var direction = Vector3.Reflect(lastVelocity.normalized, coll.contacts[0].normal);
 
         rb.velocity = direction * Mathf.Max(speed, 0f);
+
+        if (coll.gameObject.CompareTag("testingboolet"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Destroy(gameObject);
+            Destroy(gameObject);
     }
+
+            
+
+
+    
 }
