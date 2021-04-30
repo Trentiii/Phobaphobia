@@ -629,11 +629,11 @@ MonoBehaviour:
   moveInput: 5
   Turned: 1
   groundCheck: {fileID: 140017029}
-  checkRadius: 15
+  checkRadius: 5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  extraJumpsValue: 2
+  extraJumpsValue: 0
   script: {fileID: 1004671508}
 --- !u!58 &1640167673
 CircleCollider2D:
@@ -670,7 +670,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1640167675
 SpriteRenderer:
