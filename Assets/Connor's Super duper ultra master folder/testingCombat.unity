@@ -1037,7 +1037,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   extraJumpsValue: 2
-  script: {fileID: 0}
+  script: {fileID: 1004671508}
 --- !u!58 &1640167673
 CircleCollider2D:
   m_ObjectHideFlags: 0

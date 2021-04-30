@@ -7,7 +7,7 @@ public class shootyShooty : MonoBehaviour
     public Transform firePoint;
     public GameObject boolet;
     private float fireRate = 0f;
-    private float cooldownTime = 2f;
+    private float cooldownTime = 4f;
     // Start is called before the first frame update
     void Start()
     {
