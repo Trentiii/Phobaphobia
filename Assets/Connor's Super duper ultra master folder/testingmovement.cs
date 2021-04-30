@@ -5,10 +5,10 @@ using UnityEngine;
 public class testingmovement : MonoBehaviour
 {
     public float speed;
-    public float startingSpeed;
+    private float startingSpeed;
     public float shieldSpeed;
     public float jumpForce;
-    public float startingJumpForce;
+    private float startingJumpForce;
     public float moveInput;
 
     private Rigidbody2D rb;
@@ -31,7 +31,9 @@ public class testingmovement : MonoBehaviour
     {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
-        
+        startingSpeed = speed;
+        startingJumpForce = jumpForce;
+
     }
 
     private void FixedUpdate()
