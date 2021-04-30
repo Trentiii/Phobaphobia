@@ -8,6 +8,7 @@ public class testingmovement : MonoBehaviour
     public float startingSpeed;
     public float shieldSpeed;
     public float jumpForce;
+    public float startingJumpForce;
     public float moveInput;
 
     private Rigidbody2D rb;
@@ -65,10 +66,12 @@ public class testingmovement : MonoBehaviour
         if (script.shieldout == true)
         {
             speed = shieldSpeed;
+            jumpForce = 0f;
         }
         if (script.shieldout == false)
         {
             speed = startingSpeed;
+            jumpForce = startingJumpForce;
         }
         if (Input.GetAxis("Horizontal") < 0 && !Turned)
         {

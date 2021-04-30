@@ -626,6 +626,7 @@ MonoBehaviour:
   startingSpeed: 5
   shieldSpeed: 2.5
   jumpForce: 6
+  startingJumpForce: 6
   moveInput: 5
   Turned: 1
   groundCheck: {fileID: 140017029}
