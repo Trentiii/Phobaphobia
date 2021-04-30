@@ -17,7 +17,7 @@ public class boolet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(9f * 25f, 0f * 25f));
+        rb.AddForce(new Vector2(15f * 25f, 0f * 25f));
         lastVelocity = rb.velocity;
     }
 
