@@ -10319,7 +10319,7 @@ MonoBehaviour:
   shieldprototype: {fileID: 3238339554121492040, guid: 486c89d98db3b604cbb534ba42f65204,
     type: 3}
   shieldout: 0
-  cooldownTime: 2
+  cooldownTime: 0.75
   nextshieldTime: 0
 --- !u!1 &1644758197
 GameObject:
