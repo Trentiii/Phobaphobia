@@ -5,12 +5,15 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed;
+    private float startingSpeed;
+    public float shieldSpeed;
     public float jumpForce;
+    private float startingJumpForce;
     public float moveInput;
 
     private Rigidbody2D rb;
 
-    private bool facingRight = true;
+    public bool Turned = true;
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -25,11 +28,15 @@ public class Movement : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
+    public Shield script;
+
     private void Start()
     {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        startingSpeed = speed;
+        startingJumpForce = jumpForce;
     }
 
     //Movement
@@ -42,14 +49,6 @@ public class Movement : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        //if (facingRight == false && moveInput > 0)
-        {
-            Flip();
-        }
-       // else if (facingRight == true && moveInput < 0)
-        {
-            Flip();
-        }
     }
 
     //Jump
@@ -69,14 +68,32 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+        if (script.shieldout == true)
+        {
+            speed = shieldSpeed;
+            jumpForce = 0f;
+        }
+        if (script.shieldout == false)
+        {
+            speed = startingSpeed;
+            jumpForce = startingJumpForce;
+        }
+        if (Input.GetAxis("Horizontal") < 0 && !Turned)
+        {
+            Flip();
+        }
+
+        if (Input.GetAxis("Horizontal") > 0 && Turned)
+        {
+            Flip();
+        }
     }
 
     void Flip()
     {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        Turned = !Turned;
+
+        transform.Rotate(0f, 180f, 0f);
     }
 
     public void OnCollisionEnter2D(Collision2D other)

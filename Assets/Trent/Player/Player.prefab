@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  shieldSpeed: 7.5
   jumpForce: 25
   moveInput: 15
+  Turned: 1
   groundCheck: {fileID: 384375396732966309}
   checkRadius: 0.5
   whatIsGround:
@@ -136,6 +138,7 @@ MonoBehaviour:
   launchForce: 75
   respawnPoint: {x: 0, y: 0, z: 0}
   extraJumpsValue: 0
+  script: {fileID: 0}
 --- !u!50 &384375397509761769
 Rigidbody2D:
   serializedVersion: 4
