@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - testingboolet
   - Enemy
+  - shield
   layers:
   - Default
   - TransparentFX

@@ -39,11 +39,13 @@ public class boolet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        var speed = lastVelocity.magnitude;
-        var direction = Vector3.Reflect(lastVelocity.normalized, coll.contacts[0].normal);
+        if (coll.gameObject.CompareTag("shield"))
+        {
+            var speed = lastVelocity.magnitude;
+            var direction = Vector3.Reflect(lastVelocity.normalized, coll.contacts[0].normal);
 
-        rb.velocity = direction * Mathf.Max(speed, 0f);
-
+            rb.velocity = direction * Mathf.Max(speed, 0f);
+        }
         if (coll.gameObject.CompareTag("testingboolet"))
         {
             Destroy(gameObject);
