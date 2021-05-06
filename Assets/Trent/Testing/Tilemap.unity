@@ -1835,6 +1835,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &641693245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7307716241107386259, guid: 76205e3c1cfcd324aa52b7392348880c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1671774766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &674060974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,6 +4103,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b7dbeb8fb7fb52b46b03c35adfe2a25d,
         type: 3}
+    - target: {fileID: 7307716241107386258, guid: 76205e3c1cfcd324aa52b7392348880c,
+        type: 3}
+      propertyPath: shieldpoint
+      value: 
+      objectReference: {fileID: 641693245}
+    - target: {fileID: 7307716241107386258, guid: 76205e3c1cfcd324aa52b7392348880c,
+        type: 3}
+      propertyPath: shieldprototype
+      value: 
+      objectReference: {fileID: 3238339554121492040, guid: 486c89d98db3b604cbb534ba42f65204,
+        type: 3}
+    - target: {fileID: 7307716241107386258, guid: 76205e3c1cfcd324aa52b7392348880c,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7307716241107386259, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_LocalPosition.x
