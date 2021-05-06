@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public float speed;
+    public float enemySpeed;
     public float distance;
     
-    private bool movingright = true;
+    public bool movingright = true;
 
     public Transform groundDetection;
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * enemySpeed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance);
         if(groundInfo.collider == false){
