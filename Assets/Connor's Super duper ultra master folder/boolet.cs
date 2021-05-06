@@ -5,19 +5,29 @@ using UnityEngine;
 public class boolet : MonoBehaviour
 {
     private Rigidbody2D rb;
-
+    public GameObject Enemy;
+    public Patrol Patrol;
     Vector3 lastVelocity;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        GameObject Enemy = GameObject.Find("Enemy");
+        Patrol = Enemy.GetComponent<Patrol>();
     }
 
     // Start is called before the first frame update  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(15f * 25f, 0f * 25f));
+        if (Patrol.movingright == true)
+        {
+            rb.AddForce(new Vector2(15f * 25f, 0f * 25f));
+        }
+        if (Patrol.movingright == false)
+        {
+            rb.AddForce(new Vector2(-15f * 25f, 0f * 25f));
+        }
         lastVelocity = rb.velocity;
     }
 
