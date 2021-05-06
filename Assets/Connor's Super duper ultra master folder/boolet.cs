@@ -48,12 +48,17 @@ public class boolet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (coll.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        if (coll.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-            Destroy(gameObject);
-    }
+
 
             
 
