@@ -57,7 +57,7 @@ public class boolet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D trigg)
     {
-        if (trigg.CompareTag("Player"))
+        if (trigg.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
