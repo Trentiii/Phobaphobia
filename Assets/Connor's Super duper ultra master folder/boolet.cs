@@ -49,10 +49,6 @@ public class boolet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (coll.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-        }
         if (coll.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
@@ -62,6 +58,10 @@ public class boolet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D trigg)
     {
         if (trigg.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        if (trigg.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }

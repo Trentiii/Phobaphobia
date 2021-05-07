@@ -20,9 +20,9 @@ public class enemyHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D coll)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (coll.gameObject.CompareTag("testingboolet"))
+        if (collision.gameObject.CompareTag("testingboolet"))
         {
             enemyhealth -= 50;
         }
