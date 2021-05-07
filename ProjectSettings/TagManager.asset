@@ -10,6 +10,7 @@ TagManager:
   - testingboolet
   - Enemy
   - shield
+  - Ground
   layers:
   - Default
   - TransparentFX

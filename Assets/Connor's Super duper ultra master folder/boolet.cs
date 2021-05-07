@@ -6,14 +6,14 @@ public class boolet : MonoBehaviour
 {
     private Rigidbody2D rb;
     public GameObject Enemy;
-    public Patrol Patrol;
+    public Patrolpartdeux Patrol;
     Vector3 lastVelocity;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         GameObject Enemy = GameObject.Find("Enemy");
-        Patrol = Enemy.GetComponent<Patrol>();
+        Patrol = Enemy.GetComponent<Patrolpartdeux>();
     }
 
     // Start is called before the first frame update  
