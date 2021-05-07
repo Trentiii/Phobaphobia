@@ -12972,7 +12972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  current: 0
+  current: 1
   movingright: 1
   moveSpots:
   - {fileID: 978938108}
