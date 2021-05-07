@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
 
     public Vector3 respawnPoint;
 
+    public Transform keyFollowPoint;
+
 
     private int extraJumps;
     public int extraJumpsValue;
