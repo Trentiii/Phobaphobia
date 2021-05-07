@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a36eee89c1519f548bf151198ed3f84f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7dbeb8fb7fb52b46b03c35adfe2a25d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.49}
+    oldSize: {x: 1.875, y: 5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.49}
+    oldSize: {x: 1.875, y: 5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -227,11 +227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357ad2d07b9236f4c8365f491316c9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldpoint: {fileID: 7307716241107386259}
-  shieldprototype: {fileID: 3238339554121492040, guid: 486c89d98db3b604cbb534ba42f65204,
-    type: 3}
+  shieldpoint: {fileID: 0}
+  shieldprototype: {fileID: 0}
   shieldout: 0
-  cooldownTime: 0.75
+  cooldownTime: 2
   nextshieldTime: 0
 --- !u!1 &7307716241729472922
 GameObject:
