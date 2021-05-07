@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class enemyHealth : MonoBehaviour
 {
-    private Rigidbody2D rb;
     public float enemyhealth = 100;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +20,7 @@ public class enemyHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.CompareTag("testingboolet"))
         {
