@@ -35,22 +35,17 @@ public class boolet : MonoBehaviour
     void Update()
     {
         lastVelocity = rb.velocity;
+
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.CompareTag("shield"))
-        {
-            var speed = lastVelocity.magnitude;
-            var direction = Vector3.Reflect(lastVelocity.normalized, coll.contacts[0].normal);
+        var speed = lastVelocity.magnitude;
+        var direction = Vector3.Reflect(lastVelocity.normalized, coll.contacts[0].normal);
 
-            rb.velocity = direction * Mathf.Max(speed, 0f);
-        }
+        rb.velocity = direction * Mathf.Max(speed, 0f);
+
         if (coll.gameObject.CompareTag("testingboolet"))
-        {
-            Destroy(gameObject);
-        }
-        if (coll.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
@@ -60,10 +55,18 @@ public class boolet : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D trigg)
+    {
+        if (trigg.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 
 
-            
 
 
-    
+
+
+
 }
