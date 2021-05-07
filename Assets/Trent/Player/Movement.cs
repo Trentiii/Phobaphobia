@@ -26,6 +26,8 @@ public class Movement : MonoBehaviour
 
     public Transform keyFollowPoint;
 
+    public Key followingKey;
+
 
     private int extraJumps;
     public int extraJumpsValue;
