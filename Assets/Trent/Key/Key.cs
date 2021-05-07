@@ -34,10 +34,10 @@ public class Key : MonoBehaviour
             {
                 Movement thePlayer = FindObjectOfType<Movement>();
 
-                followTarget = thePlayer.tranform;
+                followTarget = thePlayer.transform;
             }
         }
     }
 
 }
-}
+
