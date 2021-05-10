@@ -14,6 +14,19 @@ public class Health : MonoBehaviour
         currenHealth = maxHealth;
     }
 
-   
+    void TakeDamage(int amount)
+    {
+        currenHealth -= amount;
+        if (currenHealth <= 0)
+        {
+            GetComponent<Death>();
+
+            //we are dead lol
+            //we die lol
+            //play animation idiot
+            //also game over
+        }
+    }
+
 
 }
