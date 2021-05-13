@@ -109,6 +109,8 @@ MonoBehaviour:
     m_Bits: 512
   launchForce: 95
   respawnPoint: {x: 0, y: 0, z: 0}
+  keyFollowPoint: {fileID: 0}
+  followingKey: {fileID: 0}
   extraJumpsValue: 0
   script: {fileID: 7307716241107386258}
 --- !u!50 &7307716240895661777
@@ -227,8 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357ad2d07b9236f4c8365f491316c9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldpoint: {fileID: 0}
-  shieldprototype: {fileID: 0}
+  shieldpoint: {fileID: 7307716241107386259}
+  shieldprototype: {fileID: 3238339554121492040, guid: 486c89d98db3b604cbb534ba42f65204,
+    type: 3}
   shieldout: 0
   cooldownTime: 2
   nextshieldTime: 0
