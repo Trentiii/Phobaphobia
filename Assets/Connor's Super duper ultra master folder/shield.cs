@@ -2,7 +2,6 @@
 
 public class Shield : MonoBehaviour
 {
-    private Rigidbody2D rb;
     public Transform shieldpoint;
     public GameObject shieldprototype;
     public bool shieldout = false;

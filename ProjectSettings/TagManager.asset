@@ -11,6 +11,10 @@ TagManager:
   - Enemy
   - shield
   - Ground
+  - movespot
+  - firepoint1
+  - firepoint2
+  - firepoint3
   layers:
   - Default
   - TransparentFX
