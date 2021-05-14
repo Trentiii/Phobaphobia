@@ -20,10 +20,12 @@ public class Clown_Move_Right : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector2 target = new Vector2(moveSpots.position.x, rb.position.y);
-        Vector2 newpos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newpos);
-
+        if (there == false)
+        {
+            Vector2 target = new Vector2(moveSpots.position.x, rb.position.y);
+            Vector2 newpos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+            rb.MovePosition(newpos);
+        }
         if (rb.transform.position == moveSpots.position)
         {
             there = true;
