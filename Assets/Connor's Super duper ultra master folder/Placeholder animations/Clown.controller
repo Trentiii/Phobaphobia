@@ -37,7 +37,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   boolet: {fileID: 4756400259592672500, guid: f5b194aad273e0540bcefebcb81202bf, type: 3}
   fireRate: 1
-  cooldownTime: 4
+  cooldownTime: 3
   script: {fileID: 114747080182712240}
 --- !u!114 &114333514885577282
 MonoBehaviour:
@@ -54,7 +54,7 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   boolet: {fileID: 4756400259592672500, guid: f5b194aad273e0540bcefebcb81202bf, type: 3}
   fireRate: 2
-  cooldownTime: 5
+  cooldownTime: 3
   script: {fileID: 114747080182712240}
 --- !u!114 &114337782357730552
 MonoBehaviour:
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b964dd99e9ce7b4587f1325145ba753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 100
   there: 0
 --- !u!114 &114819285126366986
 MonoBehaviour:

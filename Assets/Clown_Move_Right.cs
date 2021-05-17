@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Clown_Move_Right : StateMachineBehaviour
 {
-    public float speed = 2.5f;
+    public float speed;
 
     Transform moveSpots;
     Rigidbody2D rb;

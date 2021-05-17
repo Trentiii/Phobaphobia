@@ -18,7 +18,7 @@ public class Clown_Shoot3 : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Time.time > fireRate && script.there == true)
+        if (Time.time > fireRate)
         {
             shoot();
             fireRate = Time.time + cooldownTime;
@@ -28,7 +28,7 @@ public class Clown_Shoot3 : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        
     }
     void shoot()
     {
