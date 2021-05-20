@@ -25,9 +25,9 @@ public class Clown_Move : StateMachineBehaviour
         rb.MovePosition(newpos);
 
       if (Vector2.Distance(player.position, rb.position) <= attackRange)
-        {
+      {
             animator.SetTrigger("Attack");
-        }
+      }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

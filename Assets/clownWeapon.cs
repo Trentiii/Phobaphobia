@@ -16,6 +16,13 @@ public class clownWeapon : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
+
+        Collider2D colinfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if(colinfo != null)
+        {
+            colinfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+        }
+
     }
     // Start is called before the first frame update
     void Start()

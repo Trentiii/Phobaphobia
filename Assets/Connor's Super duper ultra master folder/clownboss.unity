@@ -885,6 +885,7 @@ GameObject:
   - component: {fileID: 2048208198}
   - component: {fileID: 2048208199}
   - component: {fileID: 2048208201}
+  - component: {fileID: 2048208200}
   m_Layer: 0
   m_Name: Clown
   m_TagString: Enemy
@@ -997,6 +998,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &2048208200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048208195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2ac0eaa3957e04d9bcd341bcdd28b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &2048208201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1014,7 +1027,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.28, y: 4.96}
+    oldSize: {x: 3.36, y: 4.92}
     newSize: {x: 0.88, y: 1.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
