@@ -5,25 +5,30 @@ using UnityEngine;
 public class clownDamage : MonoBehaviour
 {
     public float health = 100f;
+    public float currentHealth;
+    public float targetHealth;
     public bool damage = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        currentHealth = health;
+        targetHealth = currentHealth -= 15;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (health == targetHealth)
+        {
+            damage = true;
+        }
     }
 
    public void OnTriggerEnter2D(Collider2D coll)
    {
         if (coll.gameObject.CompareTag("testingboolet"))
         {
-            health -= 15;
-            damage = true;
+            health -= 5;
         }
    }
 }
