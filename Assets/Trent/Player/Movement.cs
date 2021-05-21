@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Movement : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Movement : MonoBehaviour
     public float jumpForce;
     private float startingJumpForce;
     public float moveInput;
+
+
+
+    public Animator animator;
 
     private Rigidbody2D rb;
 
@@ -48,10 +53,29 @@ public class Movement : MonoBehaviour
     {
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        animator.SetBool("IsJumping", !isGrounded);
 
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        animator.SetFloat("FallingSpeed", (rb.velocity.y));
+        if (rb.velocity.y < -0.1f)
+        {
+            animator.SetBool("IsFalling", true);
+            animator.SetBool("IsJumping", false); 
+        }
+        else
+        { 
+            animator.SetBool("IsFalling", false);
+        
+        }
+
+        //if (rb.velocity.y < 0)
+        //{
+        //    animator.Play("Fall_Player");
+        //}
 
     }
 
@@ -67,6 +91,8 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
+            animator.SetBool("IsJumping", true);
+            
         }
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
@@ -92,6 +118,13 @@ public class Movement : MonoBehaviour
             Flip();
         }
     }
+
+    public void OnLanding()
+    {
+       // animator.SetBool("IsJumping", false);
+       // Debug.Log("CHANGING ANIMATOR STATE to IsJumping FALSE");
+    }
+
 
     void Flip()
     {
