@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 2515059749107055571, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_Size.y
-      value: 4.34593
+      value: 4.098165
       objectReference: {fileID: 0}
     - target: {fileID: 2515059749107055571, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
@@ -583,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 2515059749107055571, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.3166084
+      value: 0.02079189
       objectReference: {fileID: 0}
     - target: {fileID: 2515059749107055571, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
@@ -593,22 +593,22 @@ PrefabInstance:
     - target: {fileID: 7307716240895661774, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.31660837
+      value: 0.020791888
       objectReference: {fileID: 0}
     - target: {fileID: 7307716240895661774, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.875
+      value: 1.5625
       objectReference: {fileID: 0}
     - target: {fileID: 7307716240895661774, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7307716240895661774, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_Size.y
-      value: 4.34593
+      value: 4.0981646
       objectReference: {fileID: 0}
     - target: {fileID: 7307716240895661774, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
@@ -645,6 +645,11 @@ PrefabInstance:
       propertyPath: launchForce
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 7307716240895661776, guid: 76205e3c1cfcd324aa52b7392348880c,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 253693680}
     - target: {fileID: 7307716240895661777, guid: 76205e3c1cfcd324aa52b7392348880c,
         type: 3}
       propertyPath: m_Mass
@@ -1648,6 +1653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  currentHealth: 0
+  targetHealth: 0
   damage: 0
 --- !u!1 &2115639426
 GameObject:
