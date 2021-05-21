@@ -15,6 +15,7 @@ public class Clown_Shoot : StateMachineBehaviour
     {
         firePoint = GameObject.FindGameObjectWithTag("firepoint1").transform;
         enterTime = Time.time;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -23,7 +24,7 @@ public class Clown_Shoot : StateMachineBehaviour
         if ((Time.time - enterTime) > fireRate)
         {
             shoot();
-            fireRate = Time.time + cooldownTime;
+            fireRate = (Time.time-enterTime) + cooldownTime;
         }
     }
 

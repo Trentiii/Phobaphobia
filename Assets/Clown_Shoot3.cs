@@ -23,7 +23,7 @@ public class Clown_Shoot3 : StateMachineBehaviour
         if ((Time.time - enterTime) > fireRate)
         {
             shoot();
-            fireRate = Time.time + cooldownTime;
+            fireRate = (Time.time - enterTime) + cooldownTime;
         }
     }
 
