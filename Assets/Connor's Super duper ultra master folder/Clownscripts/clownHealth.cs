@@ -8,17 +8,18 @@ public class clownHealth : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image fill;
-    public void SetMaxHealth(int health)
+    public clownDamage script;
+    private void Start()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        slider.maxValue = script.health;
+        slider.value = script.health;
 
         fill.color = gradient.Evaluate(1f);
     }
 
-    public void SetHealth(int health)
+    private void Update()
     {
-        slider.value = health;
+        slider.value = script.health;
 
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }

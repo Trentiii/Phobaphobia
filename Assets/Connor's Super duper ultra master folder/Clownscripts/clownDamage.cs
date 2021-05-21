@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class clownDamage : MonoBehaviour
 {
-    public clownHealth script;
     public float health = 100f;
     public bool damage = false;
     // Start is called before the first frame update
@@ -23,7 +22,7 @@ public class clownDamage : MonoBehaviour
    {
         if (coll.gameObject.CompareTag("testingboolet"))
         {
-            health -= 25;
+            health -= 15;
             damage = true;
         }
    }

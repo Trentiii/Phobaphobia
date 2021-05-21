@@ -138,8 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   attackRange: 2
-  transition: 5
+  transition: 15
   goPoint: 0
+  script: {fileID: 0}
+  Clown: {fileID: 0}
 --- !u!114 &114819285126366986
 MonoBehaviour:
   m_ObjectHideFlags: 1
