@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7307716240895661774}
   - component: {fileID: 2515059749107055571}
   m_Layer: 10
-  m_Name: Player 1
+  m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   shieldSpeed: 7.5
   jumpForce: 35
   moveInput: 15
+  animator: {fileID: 0}
   Turned: 1
   groundCheck: {fileID: 7307716241729472925}
   checkRadius: 0.5
