@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    void ResetHealth()
+    public void ResetHealth()
     {
         currentHealth = maxHealth;
     }
