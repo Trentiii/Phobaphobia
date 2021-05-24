@@ -11,8 +11,8 @@ public class clownDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damage = false;
         currentHealth = health;
-        targetHealth = currentHealth -= 15;
     }
 
     // Update is called once per frame
@@ -30,5 +30,5 @@ public class clownDamage : MonoBehaviour
         {
             health -= 5;
         }
-   }
+    }
 }

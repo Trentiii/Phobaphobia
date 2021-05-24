@@ -14,25 +14,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Right
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: NextPhase
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: LastPhase
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -78,6 +78,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   there: 0
+  script: {fileID: 0}
+  Clown: {fileID: 0}
 --- !u!114 &114333514885577282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,6 +112,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script: {fileID: 0}
   Clown: {fileID: 0}
+--- !u!114 &114345545487989416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b08e28d96af2b4d88b540925a39d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 0}
+  Clown: {fileID: 0}
 --- !u!114 &114704528240378632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   there: 0
+  script: {fileID: 0}
+  Clown: {fileID: 0}
 --- !u!114 &114803959464964832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,7 +408,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101196586005944348}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 114345545487989416}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

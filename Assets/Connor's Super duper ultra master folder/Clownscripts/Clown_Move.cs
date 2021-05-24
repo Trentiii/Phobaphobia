@@ -15,18 +15,26 @@ public class Clown_Move : StateMachineBehaviour
 
     public clownDamage script;
     public GameObject Clown;
+    public float currentTime;
+    public bool first = true;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        currentTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         GameObject Clown = GameObject.Find("Clown");
         script = Clown.GetComponent<clownDamage>();
-        goPoint = Time.time + transition;
-        goPoint -= Time.time;
+        if (first == true)
+        {
+            goPoint = Time.time + transition;
+            goPoint -= Time.time;
+            
+        }
+        script.targetHealth = 0;
         if(script.damage == true)
         {
-            goPoint += Time.time;
+            goPoint += currentTime;
         }
         script.damage = false;
     }
