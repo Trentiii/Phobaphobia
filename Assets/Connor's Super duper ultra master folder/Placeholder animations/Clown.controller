@@ -124,8 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b08e28d96af2b4d88b540925a39d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  Clown: {fileID: 0}
+  timeDiff: 0
 --- !u!114 &114704528240378632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,6 +159,8 @@ MonoBehaviour:
   goPoint: 0
   script: {fileID: 0}
   Clown: {fileID: 0}
+  currentTime: 0
+  first: 1
 --- !u!114 &114819285126366986
 MonoBehaviour:
   m_ObjectHideFlags: 1
