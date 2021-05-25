@@ -25,9 +25,13 @@ public class Player : MonoBehaviour
         {
             TakeDamage(20);
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ResetHealth();
+        }
     }
 
-
+    
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -37,8 +41,14 @@ public class Player : MonoBehaviour
 
     public void ResetHealth()
     {
+        Debug.Log("Resetting health");
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+    }
+
+    public void TakeDamage()
+    {
+        TakeDamage(20);
     }
 
 }

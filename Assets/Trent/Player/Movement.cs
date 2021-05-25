@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Movement : MonoBehaviour
 {
-    Player player;
+    
     
     public float speed;
     private float startingSpeed;
@@ -145,15 +145,21 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.tag);
+
         if (other.tag == "Death")
         {
+            Debug.Log("Tagged with death");
             transform.position = respawnPoint;
-            player.ResetHealth();
+
+            GetComponent<Player>().TakeDamage();
+            //GetComponent<Player>().ResetHealth();
         }
         if (other.tag == "Checkpoint")
         {
             respawnPoint = other.transform.position;
-            player.ResetHealth();
+            
+            GetComponent<Player>().ResetHealth();
         }
     }
 
