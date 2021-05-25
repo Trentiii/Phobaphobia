@@ -146,13 +146,18 @@ public class Movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);
+        if (other.tag == "testingboolet")
+        {
+            GetComponent<Player>().TakeDamage();
+
+        }
 
         if (other.tag == "Death")
         {
             Debug.Log("Tagged with death");
             transform.position = respawnPoint;
 
-            //GetComponent<Player>().TakeDamage();
+            
             GetComponent<Player>().ResetHealth();
         }
         if (other.tag == "Checkpoint")
