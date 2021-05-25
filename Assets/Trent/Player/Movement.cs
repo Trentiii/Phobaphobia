@@ -152,8 +152,8 @@ public class Movement : MonoBehaviour
             Debug.Log("Tagged with death");
             transform.position = respawnPoint;
 
-            GetComponent<Player>().TakeDamage();
-            //GetComponent<Player>().ResetHealth();
+            //GetComponent<Player>().TakeDamage();
+            GetComponent<Player>().ResetHealth();
         }
         if (other.tag == "Checkpoint")
         {
@@ -161,6 +161,10 @@ public class Movement : MonoBehaviour
             
             GetComponent<Player>().ResetHealth();
         }
+    }
+    public void BackToSpawn()
+    {
+        transform.position = respawnPoint;
     }
 
 }

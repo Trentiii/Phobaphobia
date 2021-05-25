@@ -37,6 +37,14 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+        
+        if(currentHealth <= 0)
+        {
+            GetComponent<Movement>().BackToSpawn();
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
+        }
+
     }
 
     public void ResetHealth()
@@ -48,7 +56,8 @@ public class Player : MonoBehaviour
 
     public void TakeDamage()
     {
-        TakeDamage(20);
+        TakeDamage(30);
     }
+
 
 }
