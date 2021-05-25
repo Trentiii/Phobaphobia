@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Movement : MonoBehaviour
 {
+    Player player;
+    
     public float speed;
     private float startingSpeed;
     public float shieldSpeed;
@@ -146,10 +148,13 @@ public class Movement : MonoBehaviour
         if (other.tag == "Death")
         {
             transform.position = respawnPoint;
+            player.ResetHealth();
         }
         if (other.tag == "Checkpoint")
         {
             respawnPoint = other.transform.position;
+            player.ResetHealth();
         }
     }
+
 }
