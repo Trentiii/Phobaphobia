@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 8619060570126096840, guid: b4ca34b3b1f152744a2bacf8bae161d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8619060570126096840, guid: b4ca34b3b1f152744a2bacf8bae161d5,
         type: 3}
@@ -2662,7 +2662,7 @@ PrefabInstance:
     - target: {fileID: 3796841062596175487, guid: ac21675332a52144681544ccc36c203c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3796841062596175487, guid: ac21675332a52144681544ccc36c203c,
         type: 3}
@@ -3102,7 +3102,7 @@ RectTransform:
   m_Children:
   - {fileID: 227153412}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3838,7 +3838,7 @@ Transform:
   - {fileID: 8568776953669815098}
   - {fileID: 8568776953159250694}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8568776952192103269
 SpriteRenderer:
