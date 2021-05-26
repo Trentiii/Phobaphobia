@@ -14,10 +14,18 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Credit");
     }
+
     public void QuitGame()
     {
         Debug.Log("quit");
         Application.Quit();
-
     }
+
+
+    public void Helpme()
+    {
+        SceneManager.LoadScene("vvvvvv");
+    }
+
+
 }
