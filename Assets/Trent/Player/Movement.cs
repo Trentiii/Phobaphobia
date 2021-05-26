@@ -149,7 +149,10 @@ public class Movement : MonoBehaviour
         if (other.tag == "testingboolet")
         {
             GetComponent<Player>().TakeDamage();
-
+        }
+        if (other.tag == "Enemy")
+        {
+            GetComponent<Player>().TakeDamage();
         }
 
         if (other.tag == "Death")
