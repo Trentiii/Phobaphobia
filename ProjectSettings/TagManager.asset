@@ -16,6 +16,7 @@ TagManager:
   - firepoint2
   - firepoint3
   - Text
+  - Boss
   layers:
   - Default
   - TransparentFX
