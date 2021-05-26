@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Thomas/Credit.unity
     guid: a10bd748c88c6f24e83c942c4aff32e6
+  - enabled: 1
+    path: Assets/Trent/Testing/TutorialLevel.unity
+    guid: effa225596529524ba17b31d3f825f23
   m_configObjects: {}
