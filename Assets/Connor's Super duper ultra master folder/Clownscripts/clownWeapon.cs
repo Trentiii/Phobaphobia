@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class clownWeapon : MonoBehaviour
 {
-    /*
+    
     public int attackDamage = 20;
 
     public Vector3 attackOffset;
@@ -20,7 +20,7 @@ public class clownWeapon : MonoBehaviour
         Collider2D colinfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if(colinfo != null)
         {
-            colinfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+            colinfo.GetComponent<Player>().TakeDamage(attackDamage);
         }
 
     }
@@ -35,5 +35,5 @@ public class clownWeapon : MonoBehaviour
     {
         
     }
-    */
+    
 }
