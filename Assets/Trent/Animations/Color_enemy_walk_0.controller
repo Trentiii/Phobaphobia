@@ -46,55 +46,6 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!114 &114093793092772178
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b964dd99e9ce7b4587f1325145ba753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  there: 0
-  script: {fileID: 0}
-  Clown: {fileID: 0}
---- !u!114 &114211240929853688
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d70da85e040c348aaae3129d45f9bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  attackRange: 2.5
-  transition: 15
-  goPoint: 0
-  script: {fileID: 0}
-  Clown: {fileID: 0}
-  currentTime: 0
-  first: 1
---- !u!114 &114364273080706916
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b08e28d96af2b4d88b540925a39d85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeDiff: 0
 --- !u!114 &114400467047909468
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -113,6 +64,26 @@ MonoBehaviour:
   cooldownTime: 3
   script: {fileID: 0}
   enterTime: 0
+--- !u!114 &114445464566608440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4af1626132924e409a098a0b6fe3892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  attackRange: 3.5
+  transition: 15
+  goPoint: 0
+  script: {fileID: 0}
+  Clown: {fileID: 0}
+  currentTime: 0
+  first: 1
 --- !u!114 &114635090046250246
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -127,6 +98,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script: {fileID: 0}
   Clown: {fileID: 0}
+--- !u!114 &114646757405612460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272d16f37a9ddbb4181ff4d3503360ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDiff: 0
 --- !u!114 &114697880605589572
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -163,6 +147,22 @@ MonoBehaviour:
   cooldownTime: 3
   script: {fileID: 0}
   enterTime: 0
+--- !u!114 &114918340331793920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886324caa12cbb14f8b88d85db250942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  there: 0
+  script: {fileID: 0}
+  Clown: {fileID: 0}
 --- !u!1101 &1101070728200284384
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -426,7 +426,7 @@ AnimatorState:
   - {fileID: 1101850292614491750}
   - {fileID: 1101399211235952956}
   m_StateMachineBehaviours:
-  - {fileID: 114211240929853688}
+  - {fileID: 114445464566608440}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -454,7 +454,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101143349102393388}
   m_StateMachineBehaviours:
-  - {fileID: 114093793092772178}
+  - {fileID: 114918340331793920}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -513,7 +513,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101219266572669846}
   m_StateMachineBehaviours:
-  - {fileID: 114364273080706916}
+  - {fileID: 114646757405612460}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

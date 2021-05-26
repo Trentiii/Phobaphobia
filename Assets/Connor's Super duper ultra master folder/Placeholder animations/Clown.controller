@@ -125,6 +125,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDiff: 0
+--- !u!114 &114587671357198074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4af1626132924e409a098a0b6fe3892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  attackRange: 3.5
+  transition: 15
+  goPoint: 0
+  script: {fileID: 0}
+  Clown: {fileID: 0}
+  currentTime: 0
+  first: 1
 --- !u!114 &114704528240378632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,26 +161,6 @@ MonoBehaviour:
   there: 0
   script: {fileID: 0}
   Clown: {fileID: 0}
---- !u!114 &114803959464964832
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d70da85e040c348aaae3129d45f9bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  attackRange: 2.5
-  transition: 15
-  goPoint: 0
-  script: {fileID: 0}
-  Clown: {fileID: 0}
-  currentTime: 0
-  first: 1
 --- !u!114 &114819285126366986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -461,7 +461,7 @@ AnimatorState:
   - {fileID: 1101683270033119630}
   - {fileID: 1101198327842777344}
   m_StateMachineBehaviours:
-  - {fileID: 114803959464964832}
+  - {fileID: 114587671357198074}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
