@@ -375,9 +375,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 45
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 45
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -545,6 +545,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac21675332a52144681544ccc36c203c, type: 3}
+--- !u!114 &264531917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3796841062675576751, guid: ac21675332a52144681544ccc36c203c,
+    type: 3}
+  m_PrefabInstance: {fileID: 225473375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c0f3df93e82224f9eaef816bd6a546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &281983730
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +951,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4224654779722924951, guid: b4ca34b3b1f152744a2bacf8bae161d5,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 264531917}
+    - target: {fileID: 4224654779722924951, guid: b4ca34b3b1f152744a2bacf8bae161d5,
+        type: 3}
+      propertyPath: SceneName
+      value: clownboss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224654779722924951, guid: b4ca34b3b1f152744a2bacf8bae161d5,
+        type: 3}
+      propertyPath: ReqScene
+      value: clownboss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619060570002272393, guid: b4ca34b3b1f152744a2bacf8bae161d5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88
+      objectReference: {fileID: 0}
     - target: {fileID: 8619060570126096840, guid: b4ca34b3b1f152744a2bacf8bae161d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1960,7 +1992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe32f051487b464f9e7cee9b44aee72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 45
   currentHealth: 0
   targetHealth: 0
   damage: 0
