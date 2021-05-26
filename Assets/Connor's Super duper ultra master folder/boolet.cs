@@ -12,7 +12,7 @@ public class boolet : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameObject Enemy = GameObject.Find("Enemy");
+        GameObject Enemy = GameObject.Find("Enemy Variant");
         Patrol = Enemy.GetComponent<Patrolpartdeux>();
     }
 
