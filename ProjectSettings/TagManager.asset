@@ -15,6 +15,7 @@ TagManager:
   - firepoint1
   - firepoint2
   - firepoint3
+  - Text
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - GroundDetection
   - Ground
   - Player
-  - 
+  - Text
   - 
   - 
   - 
