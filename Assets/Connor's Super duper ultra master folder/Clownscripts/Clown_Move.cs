@@ -17,8 +17,6 @@ public class Clown_Move : StateMachineBehaviour
     public GameObject Clown;
     public float currentTime;
     public bool first = true;
-    private bool yes = true;
-    public float goodTime;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -27,11 +25,6 @@ public class Clown_Move : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         GameObject Clown = GameObject.Find("Clown");
         script = Clown.GetComponent<clownDamage>();
-        if (yes == true)
-        {
-            goodTime = 0;
-            yes = false;
-        }
         if (first == true)
         {
             goPoint = Time.time + transition;
@@ -48,7 +41,6 @@ public class Clown_Move : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        goodTime = Time.time;
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newpos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newpos);
@@ -58,7 +50,7 @@ public class Clown_Move : StateMachineBehaviour
             animator.SetTrigger("Attack");
         }
 
-        if (goodTime > goPoint)
+        if (Time.time > goPoint)
         {
             animator.SetTrigger("NextPhase");
         }
