@@ -10,11 +10,25 @@ public class Clown_Move_Right : StateMachineBehaviour
     Rigidbody2D rb;
     public bool there = false;
 
+    public clownDamage script;
+    public GameObject Clown;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Clown_Move script2 = animator.GetBehaviour<Clown_Move>();
+        script2.first = false;
         moveSpots = GameObject.FindGameObjectWithTag("movespot").transform;
         rb = animator.GetComponent<Rigidbody2D>();
+        GameObject Clown = GameObject.Find("Clown");
+        script = Clown.GetComponent<clownDamage>();
+        script.targetHealth = script.currentHealth -= 15;
+        Clown_Shoot Shoot = animator.GetBehaviour<Clown_Shoot>();
+        Shoot.fireRate = 0f;
+        Clown_Shoot2 Shoot2 = animator.GetBehaviour<Clown_Shoot2>();
+        Shoot2.fireRate = 1f;
+        Clown_Shoot3 Shoot3 = animator.GetBehaviour<Clown_Shoot3>();
+        Shoot3.fireRate = 2f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

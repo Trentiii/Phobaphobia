@@ -8,11 +8,13 @@ public class clownDamage : MonoBehaviour
     public float currentHealth;
     public float targetHealth;
     public bool damage = false;
+    public GameObject KeyPrefab;
+    public Transform keyPoint;
     // Start is called before the first frame update
     void Start()
     {
+        damage = false;
         currentHealth = health;
-        targetHealth = currentHealth -= 15;
     }
 
     // Update is called once per frame
@@ -21,6 +23,11 @@ public class clownDamage : MonoBehaviour
         if (health == targetHealth)
         {
             damage = true;
+        }
+        if(health == 0)
+        {
+            Instantiate(KeyPrefab, keyPoint.position, keyPoint.rotation);
+            Destroy(gameObject);
         }
     }
 

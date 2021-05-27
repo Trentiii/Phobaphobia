@@ -5,10 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Thomas/Menu.unity
     guid: caed843cfafca6d49accec562d293a06
   - enabled: 1
     path: Assets/Trent/Testing/Tilemap.unity
     guid: da3ff020aa190a442899bac8dbf8ad0a
+  - enabled: 1
+    path: Assets/Thomas/Credit.unity
+    guid: a10bd748c88c6f24e83c942c4aff32e6
+  - enabled: 1
+    path: Assets/Trent/Testing/TutorialLevel.unity
+    guid: effa225596529524ba17b31d3f825f23
+  - enabled: 1
+    path: Assets/Connor's Super duper ultra master folder/clownboss.unity
+    guid: 47c92c6842807384dabfa780fcd3fab2
+  - enabled: 1
+    path: Assets/Trent/ColorBoss.unity
+    guid: 0a1949cabbea8464a8dbec260b7f7478
   m_configObjects: {}

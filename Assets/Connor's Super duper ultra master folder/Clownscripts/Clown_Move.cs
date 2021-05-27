@@ -15,18 +15,25 @@ public class Clown_Move : StateMachineBehaviour
 
     public clownDamage script;
     public GameObject Clown;
+    public float currentTime;
+    public bool first = true;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        currentTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         GameObject Clown = GameObject.Find("Clown");
         script = Clown.GetComponent<clownDamage>();
-        goPoint = Time.time + transition;
-        goPoint -= Time.time;
+        if (first == true)
+        {
+            goPoint = Time.time + transition;
+            goPoint -= Time.time;
+        }
+        script.targetHealth = 0;
         if(script.damage == true)
         {
-            goPoint += Time.time;
+            goPoint += currentTime;
         }
         script.damage = false;
     }
@@ -34,19 +41,20 @@ public class Clown_Move : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newpos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newpos);
 
-      if (Vector2.Distance(player.position, rb.position) <= attackRange)
-      {
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
             animator.SetTrigger("Attack");
-      }
+        }
 
-      if (Time.time > goPoint)
-      {
+        if (Time.time > goPoint)
+        {
             animator.SetTrigger("NextPhase");
-      }
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

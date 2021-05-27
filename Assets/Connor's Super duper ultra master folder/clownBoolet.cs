@@ -47,7 +47,7 @@ public class clownBoolet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (trigg.gameObject.CompareTag("Enemy"))
+        if (trigg.gameObject.CompareTag("Boss"))
         {
             Destroy(gameObject);
         }
